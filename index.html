@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q3Practice3</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+h2{
+background-color: #BCCCDC;
+}
+
+body{
+     background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_4zSyfLzkpmKMXhxJjlCtX7bcPqpapbM2Ig&s');
+     background-repeat: no repeat;
+     background-size: cover;
+     background-attachment: fixed;
+} 
+
+div{
+padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+label{
+    color: #526D82;
+    font-family: Consolas;
+}
+
+</style>
+
+</head>
+<body>
+	<div class="container-fluid">
+<div class="row">
+<center>
+
+<div class="col-md-4" class="container1" style="background-color: #C5D3E8;
+     width: 550px;
+     padding: 10px;
+     border: 8px dotted #9AA6B2">
+
+	<details ontoggle="message()">
+		<summary>Click Here</summary>
+			<i id="Show"></i>
+		</details>
+        <br>
+        <img src="https://cdn-icons-png.flaticon.com/256/11172/11172333.png"  width="300" height="300">
+
+	<form>
+		<label>Enter 1st Number (a):</label>
+		     <input type="text" id="num1" class="form-control">
+		<label>Enter 2nd Number (b):</label>
+		     <input type="text" id="num2" class="form-control">
+             <br>
+		<button type="Submit" class="btn btn-success" onmouseover="plus()">Add</button>
+		<button type="Submit" class="btn btn-danger" onmouseover="difference()">Subtract</button>
+		<button type="Submit" class="btn btn-warning" onmouseover="product()">Multiply</button>
+		<button type="Submit" class="btn btn-info" onmouseover="quotient()">Divide</button>
+
+
+	</form>
+<br>
+	<form>
+	    <label>Select an option</label> <br><br>
+	    <select class="form-select" id="show">
+	    	<option value="none">Choose</option>
+	    	<option value="1">Value of A</option>
+	    	<option value="2">Value of B</option>
+            <option value="3">Value of C</option>
+        </select>
+        <br><br>
+
+	    <button type="Submit" class="btn btn-success" onclick="showValue()">Show</button>
+	</form>
+
+	    <script>
+	    	function showValue(){
+	    		var showMe=document.getElementById("show").value;
+
+	    			window.alert("The value of the select variable is"+showMe).
+	    }
+	</script>
+<br>
+	    <script>
+
+	    	function plus(){
+	    		var num1=document.getElementById("num1").value;
+	    		var num2=document.getElementById("num2").value;
+	    		var sum=Number(num1)+ Number(num2);
+	    			document.write("The sum is: "+sum);
+	    	}
+	    	function difference(){
+	    		var num1=document.getElementById("num1").value;
+	    		var num2=document.getElementById("num2").value;
+	    		var difference=Number(num1)- Number(num2);
+	    			document.write("The difference is: "+difference);
+	    	}
+	    	function product(){
+	    		var num1=document.getElementById("num1").value;
+	    		var num2=document.getElementById("num2").value;
+	    		var product=Number(num1)* Number(num2);
+	    			document.write("The product is: "+product);
+	    	}
+	    	function quotient(){
+	    		var num1=document.getElementById("num1").value;
+	    		var num2=document.getElementById("num2").value;
+	    		var quotient=Number(num1)/ Number(num2);
+	    			document.write("The quotient is: "+quotient);
+	    	}
+
+	    	function message(){
+			document.getElementById("Show").innerHTML="Enter two numbers and find it's sum, quotient, product, and difference.";
+		}
+	    </script>
+
+        <a style="color: #526D82;">Submitted by Annika Francisco, 9S.</a>
+<br>
+        <a href="https://docs.google.com/document/d/1KLKWkIQ_gzDHUN6tg8g6p5IR6MldNWPk1x04O4UlusY/edit?usp=sharing" target="new" style="text-align: center; font-size: 30px;">References</a>
+
+
+</body>
+</html>
